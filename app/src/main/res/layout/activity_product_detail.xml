@@ -1,0 +1,203 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@drawable/white_background">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/back"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Product Image (Single ImageView for product image) -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="395dp"
+        android:layout_height="254dp"
+        android:contentDescription="@string/product_title"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <!-- Product Title -->
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/productImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/priceProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_price"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/productTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Size Selection -->
+    <TextView
+        android:id="@+id/size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/size_label"
+        android:textSize="16sp"
+        android:textColor="@color/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/priceProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Color Selection -->
+
+    <RadioGroup
+        android:id="@+id/radioGroupSizes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size_label">
+
+        <!-- Size options -->
+        <RadioButton
+            android:id="@+id/radioSize5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/colorSecondaryVariant"
+            android:text="@string/size_35" />
+
+        <RadioButton
+            android:id="@+id/radioSize6"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/colorSecondaryVariant"
+            android:text="@string/size_36" />
+
+        <RadioButton
+            android:id="@+id/radioSize7"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/colorSecondaryVariant"
+            android:text="@string/size_37" />
+
+        <RadioButton
+            android:id="@+id/radioSize8"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/colorSecondaryVariant"
+            android:text="@string/size_38" />
+
+        <RadioButton
+            android:id="@+id/radioSize9"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/colorSecondaryVariant"
+            android:text="@string/size_39" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/colors_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colors_label"
+        android:textSize="16sp"
+        android:textColor="@color/colorSecondaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSizes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/colors_label"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/colorBlue"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/color_circle_indigo"
+            android:contentDescription="@string/blue_color" />
+
+        <ImageButton
+            android:id="@+id/colorViolet"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/color_circle_violet"
+            android:contentDescription="@string/violet_color" />
+
+        <ImageButton
+            android:id="@+id/colorYellow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/color_circle_yellow"
+            android:contentDescription="@string/yellow_color" />
+
+        <ImageButton
+            android:id="@+id/colorOrange"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/color_circle_orange"
+            android:contentDescription="@string/orange_color" />
+
+        <ImageButton
+            android:id="@+id/colorRed"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/color_circle_red"
+            android:contentDescription="@string/red_color" />
+    </LinearLayout>
+
+    <!-- Add to Cart Button (Floating Action Button) -->
+
+    <TextView
+        android:id="@+id/descriptionProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/description"
+        android:textColor="@color/colorSecondaryVariant"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colors_label" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddToCart"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorSecondaryVariant"
+        android:contentDescription="@string/add_to_cart"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

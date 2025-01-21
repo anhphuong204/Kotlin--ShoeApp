@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/white_background">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/iProduct"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/white_background" />
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/nProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="16sp"
+        android:textColor="@color/colorOnSecondary"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:gravity="center" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/pProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="14sp"
+        android:textColor="@color/colorOnSecondary"
+        android:gravity="center" />
+
+    <!-- Add to Cart Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cart"
+            android:contentDescription="Cart Icon"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giỏ hàng"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

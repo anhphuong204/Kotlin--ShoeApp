@@ -1,0 +1,22 @@
+<!-- res/values/themes.xml -->
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.Shoe" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <!-- Text colors -->
+        <item name="colorOnBackground">@color/colorOnPrimary</item>
+        <item name="colorOnSurface">@color/colorOnPrimary</item>
+
+        <!-- Button styles -->
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+
+        <!-- Other customizations -->
+    </style>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/white_background"
+        android:drawablePadding="8dp"
+        android:hint="Tìm kiếm sản phẩm"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="594dp" />
+
+    <!-- Banner ImageView -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="395dp"
+        android:layout_height="145dp"
+        android:layout_below="@id/etSearch"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/banner_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image"/>
+
+    <!-- RecyclerView for Products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/viewPager"
+        android:layout_above="@id/navigationBar"
+        android:layout_marginTop="16dp" />
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_home"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Home" />
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_cart"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Cart" />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_logout"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Logout" />
+
+    </LinearLayout>
+
+</RelativeLayout>

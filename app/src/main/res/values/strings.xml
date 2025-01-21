@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Shoe</string>
+    <string name="skip">Bắt đầu</string>
+    <string name="banner_description">Mô tả banner</string>
+    <string name="back">Back</string>
+    <string name="product_title">Nike Air Max 95</string>
+    <string name="product_price">$230.00</string>
+    <string name="size_label">Size:</string>
+    <string name="colors_label">Colors:</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="add_to_cart">Add to Cart</string>
+
+    <!-- Size options -->
+    <string name="size_35">35</string>
+    <string name="size_36">36</string>
+    <string name="size_37">37</string>
+    <string name="size_38">38</string>
+    <string name="size_39">39</string>
+
+    <!-- Color content descriptions -->
+    <string name="blue_color">Blue Color</string>
+    <string name="violet_color">Violet Color</string>
+    <string name="yellow_color">Yellow Color</string>
+    <string name="orange_color">Orange Color</string>
+    <string name="red_color">Red Color</string>
+</resources>
